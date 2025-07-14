@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 import AdminLayout from "../context/layouts/AdminLayout";
 import CoordinadorLayout from "../context/layouts/CoordinadorLayout";
 import OperadorLayout from "../context/layouts/OperadorLayout"; */
-
+import AdminLayout from "../layouts/admind.layaut";
 // Pages generales
 /* import LandingPage from '../pages/LandingPage';
 import NotFound from '../pages/NotFound'; */
@@ -73,7 +73,7 @@ export const routes = [
   // ============ RUTAS ADMIN ============
   {
     path: "/admin",
-    element: "admindlayaut",
+    element: <AdminLayout></AdminLayout>,
     children: [
       { 
         index: true, 
