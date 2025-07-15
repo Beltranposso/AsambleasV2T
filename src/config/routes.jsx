@@ -27,7 +27,7 @@ import AdminCoordinadoresPage from "../pages/admin/Coordinadores";
 import AdminParticipantesPage from "../pages/admin/Participantes";
 import AdminInformesPage from "../pages/admin/Informes";
 import AdminAnaliticasPage from "../pages/admin/Analiticas"; */
-
+import AdminDashboardPage from "../pages/admin/view/dashboard/dashboard.page"
 // ============ COORDINADOR PAGES ============
 /* import CoordinadorDashboardPage from "../pages/coordinador/Dashboard";
 import CoordinadorAsambleasPage from "../pages/coordinador/Asambleas";
@@ -77,7 +77,7 @@ export const routes = [
     children: [
       { 
         index: true, 
-        element: "dashboard"
+        element: <AdminDashboardPage></AdminDashboardPage>
       },
       { 
         path: "dashboard", 

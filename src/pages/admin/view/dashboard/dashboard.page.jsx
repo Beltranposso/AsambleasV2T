@@ -1,13 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { PageHeader } from "@/components/page-header"
-import { CreateAssemblyForm } from "@/components/forms/create-assembly-form"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Progress } from "@/components/ui/progress"
+import { PageHeader } from "./components/page-header"
+import { CreateAssemblyForm } from "../../components/create-assembly-form"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../../components/ui/card"
+import { Badge } from "../../../../components/ui/badge"
+import { Button } from "../../../../components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "../../../../components/ui/avatar"
+import { Progress } from "../../../../components/ui/progress"
+
 import {
   Calendar,
   Users,
@@ -20,7 +21,7 @@ import {
   ArrowRight,
   Plus,
 } from "lucide-react"
-import { VotingPreview } from "@/components/voting/voting-preview"
+import { VotingPreview } from "../../components/voting-preview"
 
 // Mock data
 const assembliesData = [
