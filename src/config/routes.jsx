@@ -28,6 +28,9 @@ import AdminParticipantesPage from "../pages/admin/Participantes";
 import AdminInformesPage from "../pages/admin/Informes";
 import AdminAnaliticasPage from "../pages/admin/Analiticas"; */
 import AdminDashboardPage from "../pages/admin/view/dashboard/dashboard.page"
+import AdminAsambleas from "../pages/admin/view/asambleas/asambleas.page"
+import AdminCoordinadores from "../pages/admin/view/coordinadores/coordinador.page"
+import AdminParticipantes from "../pages/admin/view/participantes/participates.page"
 // ============ COORDINADOR PAGES ============
 /* import CoordinadorDashboardPage from "../pages/coordinador/Dashboard";
 import CoordinadorAsambleasPage from "../pages/coordinador/Asambleas";
@@ -80,20 +83,20 @@ export const routes = [
         element: <AdminDashboardPage></AdminDashboardPage>
       },
       { 
-        path: "dashboard", 
+        path: "", 
         element: "dashboard"
       },
       { 
         path: "asambleas", 
-        element: "asambleas"
+        element: <AdminAsambleas></AdminAsambleas>
       },
       { 
         path: "coordinadores", 
-        element: "coordinarodes"
+        element: <AdminCoordinadores></AdminCoordinadores>
       },
       { 
         path: "participantes", 
-        element: "participantes"
+        element: <AdminParticipantes></AdminParticipantes>
       },
       { 
         path: "informes", 
