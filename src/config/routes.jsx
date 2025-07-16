@@ -34,11 +34,13 @@ import CoordinadorAsambleasPage from "../pages/coordinador/Asambleas";
 import CoordinadorParticipantesPage from "../pages/coordinador/Participantes";
 import CoordinadorInformesPage from "../pages/coordinador/Informes"; */
 
-// ============ OPERADOR PAGES ============
-/* import OperadorDashboardPage from "../pages/operador/Dashboard";
-import OperadorRegistroPage from "../pages/operador/Registro";
-import OperadorParticipantesPage from "../pages/operador/Participantes"; */
 
+
+// ============ OPERADOR PAGES ============
+//import OperadorDashboardPage from "../pages/operador/Registro"
+import Layaoutoperador from "../layouts/operador.layaut"
+import OperadorContent from "../pages/operador/views/asambleas-view"
+import operatorPage from "../pages/operador/registro-operador"
 export const routes = [
   // ============ RUTAS PÚBLICAS ============
   {
@@ -113,7 +115,7 @@ export const routes = [
     children: [
       { 
         index: true, 
-        element: "corrdinador"
+        element: "sss"
       },
       { 
         path: "dashboard", 
@@ -137,12 +139,11 @@ export const routes = [
   // ============ RUTAS OPERADOR ============
   {
     path: "/operador",
-    element:"operadorlayaut",
+    element:"",
     children: [
       { 
         index: true, 
-        element: "<OperadorDashboardPage /> "
-      },
+        element: <operatorPage/>      },
       { 
         path: "dashboard", 
         element: "<OperadorDashboardPage /> "
