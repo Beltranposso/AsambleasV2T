@@ -2,13 +2,13 @@
 
 import { useState } from "react"
 import { PageHeader } from "./Components/page-header"
-import { AsambleasView } from "./views/asambleas-view"
+ import { AsambleasView } from "./views/asambleas-view" 
 import { UsuariosView } from "./views/usuarios-view"
 import { PoderesView } from "./views/poderes-view"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
 import { Users, Shield, CheckCircle } from "lucide-react"
 
-export default function RegistroOperador() {
+export default  function Operador() {
   const [currentView, setCurrentView] = useState("asambleas")
   const [selectedAsambleaId, setSelectedAsambleaId] = useState(null)
 
@@ -145,9 +145,9 @@ export default function RegistroOperador() {
 
   if (currentView === "asambleas") {
     return (
-      <MainLayout>
+      <div>
         <AsambleasView asambleas={asambleas} onSelectAsamblea={handleSelectAsamblea} />
-      </MainLayout>
+      </div>
     )
   }
 

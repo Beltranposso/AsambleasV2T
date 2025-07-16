@@ -8,7 +8,7 @@ import { ArrowLeft } from "lucide-react"
 
 
 
-export default function PageHeader({ title, subtitle, showBackButton, onBack, badges }) {
+export  function PageHeader({ title, subtitle, showBackButton, onBack, badges }) {
 
   const getBadgeClasses = (variant = "blue") => {
     const variants = {

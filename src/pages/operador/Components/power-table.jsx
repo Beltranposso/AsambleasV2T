@@ -2,7 +2,7 @@
 
 import { Button } from "../../../components/ui/button"
 import { Badge } from "../../../components/ui/badge"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../../../../components/ui/table"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../../components/ui/table"
 import { Edit, Trash2, Shield } from "lucide-react"
 
 export function PowerTable({ poderes, getAsambleaName }) {
