@@ -1,5 +1,4 @@
 "use client"
-
 import { Link, useLocation } from "react-router-dom"
 import { useState } from "react"
 import {
@@ -21,32 +20,32 @@ import { CreateAssemblyForm } from "./components/create-assembly-form"
 const navigationItems = [
   {
     title: "Dashboard",
-    to: "/",
+    to: "",
     icon: Home,
   },
   {
     title: "Asambleas", 
-    to: "/asambleas",
+    to: "asambleas",
     icon: Calendar,
   },
   {
     title: "Coordinadores",
-    to: "/coordinadores",
+    to: "coordinadores",
     icon: UserCheck,
   },
   {
     title: "Participantes",
-    to: "/participantes",
+    to: "participantes",
     icon: Users,
   },
   {
     title: "Informes",
-    to: "/informes",
+    to: "informes",
     icon: FileText,
   },
   {
     title: "Analíticas",
-    to: "/analiticas",
+    to: "analiticas",
     icon: TrendingUp,
   },
 ]
@@ -56,10 +55,16 @@ export function AppSidebar() {
   const [createAssemblyOpen, setCreateAssemblyOpen] = useState(false)
 
   const isActive = (to) => {
-    if (to === "/") {
-      return location.pathname === "/"
+    const currentPath = location.pathname;
+    
+    // Para el dashboard (ruta vacía o index)
+    if (to === "") {
+      return currentPath === "/admin" || currentPath === "/admin/";
     }
-    return location.pathname.startsWith(to)
+    
+    // Para las demás rutas anidadas
+    const fullPath = `/admin/${to}`;
+    return currentPath === fullPath || currentPath.startsWith(fullPath + "/");
   }
 
   return (
@@ -129,17 +134,31 @@ export function AppSidebar() {
           <div className="space-y-1 border-t border-gray-100 pt-4">
             <Link
               to="/analiticas"
-              className="w-full flex items-center gap-3 px-3 py-3 text-left rounded-lg transition-colors text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+              className={`
+                w-full flex items-center gap-3 px-3 py-3 text-left rounded-lg transition-colors text-base
+                ${
+                  location.pathname === "/analiticas"
+                    ? "bg-blue-50 text-blue-700 font-medium"
+                    : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                }
+              `}
             >
-              <TrendingUp className="h-5 w-5 text-gray-500" />
+              <TrendingUp className={`h-5 w-5 ${location.pathname === "/analiticas" ? "text-blue-600" : "text-gray-500"}`} />
               <span>Analíticas</span>
             </Link>
 
             <Link
               to="/configuracion"
-              className="w-full flex items-center gap-3 px-3 py-3 text-left rounded-lg transition-colors text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+              className={`
+                w-full flex items-center gap-3 px-3 py-3 text-left rounded-lg transition-colors text-base
+                ${
+                  location.pathname === "/configuracion"
+                    ? "bg-blue-50 text-blue-700 font-medium"
+                    : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                }
+              `}
             >
-              <Settings className="h-5 w-5 text-gray-500" />
+              <Settings className={`h-5 w-5 ${location.pathname === "/configuracion" ? "text-blue-600" : "text-gray-500"}`} />
               <span>Centro de Admin</span>
             </Link>
 
