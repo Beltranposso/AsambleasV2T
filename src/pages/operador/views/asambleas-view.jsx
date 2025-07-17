@@ -1,11 +1,11 @@
 "use client"
 
-/* import {PageHeader} from "../Components/page-header" */
+import PageHeader from "../Components/page-header"
 import { AsambleaCard } from "../Components/asamblea-card"
 import { Calendar } from "lucide-react"
 
 
-export function AsambleasView({ asambleas, onSelectAsamblea }) {
+export default function AsambleasView({ asambleas, onSelectAsamblea }) {
   return (
     <>
      
