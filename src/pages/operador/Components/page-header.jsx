@@ -22,6 +22,7 @@ export  function PageHeader({ title, subtitle, showBackButton, onBack, badges })
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           {showBackButton && (
