@@ -5,11 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../..
 import { Input } from "../../../components/ui/input"
 import { Button } from "../../../components/ui/button"
 import { UserTable } from "../Components/user-table"
-<<<<<<< HEAD
-import { UserDialog } from "../Components/user-dialog"
-=======
+
 import { UserDialog } from "../components/user-dialog"
->>>>>>> origin/main
+
 import { Search, Plus } from "lucide-react"
 
 export function UsuariosView({ usuarios, asambleaName, onToggleAsistencia, onManagePowers }) {

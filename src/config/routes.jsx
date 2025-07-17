@@ -43,11 +43,9 @@ import CoordinadorInformesPage from "../pages/coordinador/Informes"; */
 //import OperadorDashboardPage from "../pages/operador/Registro"
 /* import Layaoutoperador from "../layouts/operador.layaut"
 import OperadorContent from "../pages/operador/views/asambleas-view" */
-<<<<<<< HEAD
-import operatorPage from "../pages/operador/registro-operador"
-=======
+
 import OperadorPageindex from "../pages/operador/registro-operador"
->>>>>>> origin/main
+
 export const routes = [
   // ============ RUTAS PÚBLICAS ============
   {
@@ -150,11 +148,9 @@ export const routes = [
     children: [
       { 
         index: true, 
-<<<<<<< HEAD
-        element: <operatorPage/> 
-=======
+
         element: <OperadorPageindex/>      
->>>>>>> origin/main
+
       },
       { 
         path: "dashboard", 
