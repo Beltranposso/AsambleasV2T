@@ -1,6 +1,6 @@
 import { AsambleasView } from "./asambleas-view";
 
-export default function AsambleasWrapper() {
+export  function AsambleasWrapper() {
   const asambleas = [
     {
       id: 1,

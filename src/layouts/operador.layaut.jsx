@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react"
 import { Outlet } from "react-router-dom"
-import PageHeader from "../pages/operador/Components/page-header"
+import {PageHeader} from "../pages/operador/Components/page-header"
 
 export default function MainLayout({ children }) {
   return (

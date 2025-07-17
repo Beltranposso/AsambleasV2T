@@ -4,8 +4,8 @@ import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../components/ui/card"
 import { Input } from "../../../components/ui/input"
 import { Button } from "../../../components/ui/button"
-import { UserTable } from "../../../components/usuarios/user-table"
-import { UserDialog } from "../../../components/usuarios/user-dialog"
+import { UserTable } from "../Components/user-table"
+import { UserDialog } from "../Components/user-dialog"
 import { Search, Plus } from "lucide-react"
 
 export function UsuariosView({ usuarios, asambleaName, onToggleAsistencia, onManagePowers }) {

@@ -1,9 +1,9 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Switch } from "@/components/ui/switch"
+import { Button } from "../../../components/ui/button"
+import { Badge } from "../../../components/ui/badge"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../../components/ui/table"
+import { Switch } from "../../../components/ui/switch"
 import { Edit, UserPlus, Trash2, CheckCircle, XCircle, Shield, Clock } from "lucide-react"
 
 export function UserTable({ usuarios, onEdit, onManagePowers, onToggleAsistencia }) {
