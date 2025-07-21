@@ -5,9 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../..
 import { Input } from "../../../components/ui/input"
 import { Button } from "../../../components/ui/button"
 import { UserTable } from "../Components/user-table"
-
 import { UserDialog } from "../components/user-dialog"
-
 import { Search, Plus } from "lucide-react"
 
 export function UsuariosView({ usuarios, asambleaName, onToggleAsistencia, onManagePowers }) {
@@ -35,8 +33,11 @@ export function UsuariosView({ usuarios, asambleaName, onToggleAsistencia, onMan
 
   return (
     <>
-      <Card className="bg-white border border-gray-200 rounded-xl shadow-sm">
-        <CardHeader className="border-b border-gray-100 pb-4">
+ <Card className="bg-white border border-gray-200 rounded-xl shadow-sm w-[1520px]  mt-6 mr-6 ml-45">
+
+
+
+        <CardHeader className="border-b border-gray-100 pb-4 px-6">
           <CardTitle className="text-xl font-semibold text-gray-900">Usuarios de {asambleaName}</CardTitle>
           <CardDescription className="text-gray-600">
             Gestiona la asistencia y datos de los usuarios registrados

@@ -8,7 +8,8 @@ import { Search, Plus } from "lucide-react"
 
 export function PoderesView({ poderes, getAsambleaName }) {
   return (
-    <Card className="bg-white border border-gray-200 rounded-xl shadow-sm">
+   <Card className="bg-white border border-gray-200 rounded-xl shadow-sm w-[1520px]  mt-6 mr-6 ml-45">
+
       <CardHeader className="border-b border-gray-100 pb-4">
         <CardTitle className="text-xl font-semibold text-gray-900">Gestión de Poderes</CardTitle>
         <CardDescription className="text-gray-600">

@@ -2,17 +2,16 @@
 
 import { useState } from "react"
 import { PageHeader } from "./Components/page-header"
- import { AsambleasView } from "./views/asambleas-view" 
+import { AsambleasView } from "./views/asambleas-view"
 import { UsuariosView } from "./views/usuarios-view"
 import { PoderesView } from "./views/poderes-view"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
 import { Users, Shield, CheckCircle } from "lucide-react"
 
-export default  function Operador() {
+export default function Operador() {
   const [currentView, setCurrentView] = useState("asambleas")
   const [selectedAsambleaId, setSelectedAsambleaId] = useState(null)
 
-  // Datos de ejemplo
   const asambleas = [
     {
       id: "1",
@@ -139,8 +138,8 @@ export default  function Operador() {
     return asamblea ? asamblea.nombre : "Sin asignar"
   }
 
-  const filteredUsuarios = usuarios.filter((usuario) => !selectedAsambleaId || usuario.asamblea === selectedAsambleaId)
-  const filteredPoderes = poderes.filter((poder) => !selectedAsambleaId || poder.asamblea === selectedAsambleaId)
+  const filteredUsuarios = usuarios.filter((u) => !selectedAsambleaId || u.asamblea === selectedAsambleaId)
+  const filteredPoderes = poderes.filter((p) => !selectedAsambleaId || p.asamblea === selectedAsambleaId)
   const selectedAsamblea = asambleas.find((a) => a.id === selectedAsambleaId)
 
   if (currentView === "asambleas") {
@@ -153,42 +152,52 @@ export default  function Operador() {
 
   return (
     <div>
-      <PageHeader
-        title={selectedAsamblea?.nombre || "Asamblea"}
-        subtitle="Gestión de usuarios y asistencia"
-        showBackButton
-        onBack={handleBackToAsambleas}
-        badges={[
-          {
-            icon: <Users className="h-4 w-4 mr-1.5" />,
-            text: `${filteredUsuarios.length} usuarios`,
-            variant: "blue",
-          },
-          {
-            icon: <CheckCircle className="h-4 w-4 mr-1.5" />,
-            text: `${filteredUsuarios.filter((u) => u.asistencia === "presente").length} presentes`,
-            variant: "green",
-          },
-        ]}
-      />
+  <div className="max-w-[1553px] transform translate-x-41 px-4">
 
-      <Tabs defaultValue="usuarios" className="space-y-6">
-        <TabsList className="bg-white border border-gray-200 p-1 rounded-lg">
-          <TabsTrigger
-            value="usuarios"
-            className="flex items-center gap-2 data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
-          >
-            <Users className="h-4 w-4" />
-            Gestión de Usuarios
-          </TabsTrigger>
-          <TabsTrigger
-            value="poderes"
-            className="flex items-center gap-2 data-[state=active]:bg-green-50 data-[state=active]:text-green-700"
-          >
-            <Shield className="h-4 w-4" />
-            Gestión de Poderes
-          </TabsTrigger>
-        </TabsList>
+
+
+
+        <PageHeader
+          title={selectedAsamblea?.nombre || "Asamblea"}
+          subtitle="Gestión de usuarios y asistencia"
+          showBackButton
+          onBack={handleBackToAsambleas}
+          badges={[
+            {
+              icon: <Users className="h-4 w-4 mr-1.5" />,
+              text: `${filteredUsuarios.length} usuarios`,
+              variant: "blue",
+            },
+            {
+              icon: <CheckCircle className="h-4 w-4 mr-1.5" />,
+              text: `${filteredUsuarios.filter((u) => u.asistencia === "presente").length} presentes`,
+              variant: "green",
+            },
+          ]}
+        />
+      </div>
+
+      <Tabs defaultValue="usuarios" className="space-y-6 mt-4">
+        {/* Contenedor centrado para TabsList */}
+    <div className="flex justify-start transform translate-x-45 translate-y-7">
+
+          <TabsList className="bg-white border border-gray-200 p-1 rounded-lg flex space-x-2">
+            <TabsTrigger
+              value="usuarios"
+              className="flex items-center gap-2 px-4 py-2 data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
+            >
+              <Users className="h-4 w-4" />
+              Gestión de Usuarios
+            </TabsTrigger>
+            <TabsTrigger
+              value="poderes"
+              className="flex items-center gap-2 px-4 py-2 data-[state=active]:bg-green-50 data-[state=active]:text-green-700"
+            >
+              <Shield className="h-4 w-4" />
+              Gestión de Poderes
+            </TabsTrigger>
+          </TabsList>
+        </div>
 
         <TabsContent value="usuarios">
           <UsuariosView

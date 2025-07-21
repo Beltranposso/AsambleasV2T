@@ -116,11 +116,11 @@ export const routes = [
   // ============ RUTAS COORDINADOR ============
   {
     path: "/coordinador",
-    element: "layautcoordinador",
+    element: <CoordinadorLayout></CoordinadorLayout>,
     children: [
       { 
         index: true, 
-        element: "sss"
+        element: <CoordinadorPageindex/>     
       },
       { 
         path: "dashboard", 

@@ -6,7 +6,7 @@ import { Calendar } from "lucide-react"
 
 export function AsambleasView({ asambleas, onSelectAsamblea }) {
   return (
-    <div className="px-6 py-8 space-y-6"> {/* AQUÍ */}
+    <div className="px-45 space-y-6"> {/* AQUÍ */}
       
 
       <PageHeader title="Asambleas" icon={Calendar} />

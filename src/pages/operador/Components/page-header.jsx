@@ -1,18 +1,13 @@
 "use client"
 
 import React from "react"
-
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft } from "lucide-react"
 
-
-
-export  function PageHeader({ title, subtitle, showBackButton, onBack, badges }) {
-
+export function PageHeader({ title, subtitle, showBackButton, onBack, badges }) {
   const getBadgeClasses = (variant = "blue") => {
     const variants = {
-
       blue: "bg-blue-50 text-blue-700 border-blue-200",
       green: "bg-green-50 text-green-700 border-green-200",
       gray: "bg-gray-50 text-gray-700 border-gray-200",
@@ -21,8 +16,7 @@ export  function PageHeader({ title, subtitle, showBackButton, onBack, badges })
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-      
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-10">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           {showBackButton && (
@@ -37,7 +31,9 @@ export  function PageHeader({ title, subtitle, showBackButton, onBack, badges })
           )}
           <div>
             <h1 className="text-2xl font-semibold text-gray-900">{"Operador de Registro"}</h1>
-            <p className="text-gray-600">{"Selecciona una asamblea para gestionar usuarios y asistencia"}</p>
+            <p className="text-gray-600">
+              {"Selecciona una asamblea para gestionar usuarios y asistencia"}
+            </p>
           </div>
         </div>
         {badges && badges.length > 0 && (
